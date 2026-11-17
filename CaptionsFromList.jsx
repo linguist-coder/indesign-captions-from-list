@@ -272,7 +272,16 @@ function cflContains(a, b) {
 // below the image's layer (a background). A full-page object on the same
 // layer or above is reported, marked "covers the page", because the script
 // cannot tell whether it is in front of the caption.
+// Bounds are compared in spread coordinates. With the page origin, an object
+// on the facing page has the same numbers as one on this page.
 function cflOverlaps(frame, holder, pg) {
+  var doc = pg.parent.parent, was = doc.viewPreferences.rulerOrigin;
+  doc.viewPreferences.rulerOrigin = RulerOrigin.SPREAD_ORIGIN;
+  try { return cflOverlapsIn(frame, holder, pg); }
+  finally { doc.viewPreferences.rulerOrigin = was; }
+}
+
+function cflOverlapsIn(frame, holder, pg) {
   var spread = pg.parent, fb = frame.geometricBounds, pb = pg.bounds, mine = holder.itemLayer.index;
   var items = spread.allPageItems, texts = [], others = [];
   for (var i = 0; i < items.length; i++) {

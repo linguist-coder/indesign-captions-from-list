@@ -309,6 +309,30 @@ try {
   cflReportFile = keepRF;
   say("-- report write failure: error=" + sv.error);
 
+  // ---- L. facing pages: the same page coordinates on both pages of a spread
+  var fd = app.documents.add(false);
+  fd.documentPreferences.facingPages = true;
+  fd.documentPreferences.pagesPerDocument = 3;
+  fd.documentPreferences.pageWidth = "612pt";
+  fd.documentPreferences.pageHeight = "792pt";
+  fd.viewPreferences.horizontalMeasurementUnits = MeasurementUnits.POINTS;
+  fd.viewPreferences.verticalMeasurementUnits = MeasurementUnits.POINTS;
+  fd.viewPreferences.rulerOrigin = RulerOrigin.PAGE_ORIGIN;
+  var fps = fd.paragraphStyles.add({ name: "Caption", pointSize: 9, leading: 11 });
+  var lp = fd.pages[1], rp = fd.pages[2];                        // pages 2 and 3 share a spread
+  var fl = lp.rectangles.add({ geometricBounds: [60, 72, 320, 540] });
+  fl.place(File(DIR + "img/harbor.tif")); fl.fit(FitOptions.FILL_PROPORTIONALLY);
+  var fr = rp.rectangles.add({ geometricBounds: [60, 72, 320, 540] });
+  fr.place(File(DIR + "img/map.jpg")); fr.fit(FitOptions.FILL_PROPORTIONALLY);
+  rp.textFrames.add({ geometricBounds: [322, 72, 400, 540], contents: "Body text on the right page." });
+  say("-- facing pages: spread of page 2 has " + lp.parent.pages.length + " pages, page 3 on the same spread: " + (lp.parent.id === rp.parent.id));
+  var fcsv = File(DIR + "facing.csv");                           // written here, so no fixture is needed
+  fcsv.encoding = "UTF-8"; fcsv.open("w"); fcsv.write("File,Caption\nharbor.tif,Left page.\nmap.jpg,Right page.\n"); fcsv.close();
+  run({ doc: fd, ps: fps, os: null }, "facing.csv");
+  fcsv.remove();
+  say("-- facing pages: ruler origin after = " + fd.viewPreferences.rulerOrigin);
+  fd.close(SaveOptions.NO);
+
   // ---- F. report file names
   env2.doc.save(File(DIR + "test-names.indd"));
   var f1 = cflReportFile(env2.doc, File(DIR + "captions.csv"));

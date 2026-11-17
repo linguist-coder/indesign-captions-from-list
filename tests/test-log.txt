@@ -227,4 +227,8 @@ ok refused ansi-cr.csv: The list is not saved as UTF-8 (line 2 of the file). In 
 -- failure place: message=forced failure while placing | page items before=83 after=83 | captions left=0 | active layer Corrections -> Corrections
 -- failure layer: message=forced failure while restoring the layer | page items before=83 after=83 | captions left=0 | active layer Corrections -> Corrections
 -- report write failure: error=Cannot write C:\no-such-folder-cfl\report.csv
--- report names: test-names-captions-20261117-092218.csv then test-names-captions-20261117-092218-2.csv
+-- facing pages: spread of page 2 has 2 pages, page 3 on the same spread: true
+== facing.csv added=2 updated=0 unchanged=0 skipped=0
+   added, frame overlaps another object | map.jpg | 3 | TextFrame
+-- facing pages: ruler origin after = 1380143215
+-- report names: test-names-captions-20261117-103851.csv then test-names-captions-20261117-103851-2.csv
