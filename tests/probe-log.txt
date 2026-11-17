@@ -1,0 +1,8 @@
+layer 0 Corrections index=0
+layer 1 Layer 1 index=1
+layer 2 Background index=2
+over layer=Corrections idx=0 parent=Spread visible=true bounds=0,0,792,612
+image layer idx=1 page bounds=0,0,792,612
+contains=true
+allPageItems=5
+overlaps=Rectangle (covers the page)

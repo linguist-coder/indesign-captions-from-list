@@ -1,0 +1,3 @@
+s1|1|324,72,330.542907714844,540|added, frame overlaps another object / harbor.tif / 1 / TextFrame; Rectangle (covers the page)
+s2|1|324,72,330.542907714844,540|added, frame overlaps another object / harbor.tif / 1 / Rectangle
+s3|1|324,72,330.542907714844,540|

@@ -1,0 +1,230 @@
+ok refused unquoted-comma.csv: Row 2 of the list has more than two columns. A caption that contains the separator must be in quotes (Excel does this when it saves).
+ok refused unclosed-quote.csv: Row 2 of the list: a quote that is never closed.
+ok refused no-header.csv: The first row of the list must be the header File,Caption, with no other columns.
+ok refused quoted-header-semi.csv: The first row of the list must be the header File,Caption, with no other columns.
+ok refused quote-mid-cell.csv: Row 2 of the list: a quote inside a cell that does not start with a quote.
+ok refused ansi.csv: The list is not saved as UTF-8 (line 2 of the file). In Excel, save it as CSV UTF-8.
+ok refused utf16.csv: The list is not saved as UTF-8 (line 1 of the file). In Excel, save it as CSV UTF-8.
+ok refused extra-header.csv: The first row of the list must be the header File,Caption, with no other columns.
+ok refused nul.csv: Line 2 of the list contains a NUL character. Check the file.
+ok refused utf16-ascii.csv: The list is not saved as UTF-8 (line 1 of the file). In Excel, save it as CSV UTF-8.
+ok refused ansi-cr.csv: The list is not saved as UTF-8 (line 2 of the file). In Excel, save it as CSV UTF-8.
+== captions.csv added=22 updated=0 unchanged=0 skipped=5
+   duplicate row (row 5 used) | img-004.jpg |  | row 7
+   empty caption (no text for this file) | img-009.png |  | row 11
+   matches more than one file (row ignored) | shared.jpg |  | row 30: <repo>\tests\fixtures\img\a\shared.jpg; <repo>\tests\fixtures\img\b\shared.jpg
+   matches more than one file (row ignored) | interview |  | row 29: <repo>\tests\fixtures\img\interview.jpg; <repo>\tests\fixtures\img\interview.tif
+   only a similar file name is placed (row ignored) | img-027.JPG |  | row 27: img-027.png
+   only a similar file name is placed (row ignored) | map.v2 |  | row 31: map.v2.jpg
+   in the list but not in the document | img-099.jpg |  | row 32
+   placed 2 times | img-005.jpg | 3, 16 | row 6
+   skipped: image or its layer is hidden | img-017.jpg | 9 | row 19
+   no usable row in the list | img-020.jpg | 10 | 
+   no usable row in the list | img-021.png | 11 | 
+   skipped: image is inside a group | img-022.jpg | 11 | row 22
+   skipped: image or its layer is locked | img-024.png | 12 | row 24
+   skipped: image is on the pasteboard | img-026.jpg |  | row 26
+   no usable row in the list | img-027.png | 14 | 
+   skipped: image is anchored in text | img-012.png | 15 | row 14
+   no usable row in the list | interview.jpg | 17 | 
+   no usable row in the list | interview.tif | 17 | 
+   no usable row in the list | shared.jpg | 18 | 
+   no usable row in the list | shared.jpg | 18 | 
+   no usable row in the list | map.v2.jpg | 19 | 
+   added, frame overlaps another object | img-015.png | 8 | TextFrame; Rectangle (covers the page)
+   added, frame overlaps another object | img-016.jpg | 8 | TextFrame; Rectangle (covers the page)
+   added, frame runs into the bottom margin | img-018.png | 9 | 
+   added, frame is below the page | low.jpg | 20 | 
+-- img-015 text wrap unchanged: true
+-- wrapped body text: 6 lines before, 6 lines after, every line in the same place: true
+-- img-001 gap = 4 pt
+== captions.csv added=0 updated=0 unchanged=22 skipped=5
+   duplicate row (row 5 used) | img-004.jpg |  | row 7
+   empty caption (no text for this file) | img-009.png |  | row 11
+   matches more than one file (row ignored) | shared.jpg |  | row 30: <repo>\tests\fixtures\img\a\shared.jpg; <repo>\tests\fixtures\img\b\shared.jpg
+   matches more than one file (row ignored) | interview |  | row 29: <repo>\tests\fixtures\img\interview.jpg; <repo>\tests\fixtures\img\interview.tif
+   only a similar file name is placed (row ignored) | img-027.JPG |  | row 27: img-027.png
+   only a similar file name is placed (row ignored) | map.v2 |  | row 31: map.v2.jpg
+   in the list but not in the document | img-099.jpg |  | row 32
+   placed 2 times | img-005.jpg | 3, 16 | row 6
+   skipped: image or its layer is hidden | img-017.jpg | 9 | row 19
+   no usable row in the list | img-020.jpg | 10 | 
+   no usable row in the list | img-021.png | 11 | 
+   skipped: image is inside a group | img-022.jpg | 11 | row 22
+   skipped: image or its layer is locked | img-024.png | 12 | row 24
+   skipped: image is on the pasteboard | img-026.jpg |  | row 26
+   no usable row in the list | img-027.png | 14 | 
+   skipped: image is anchored in text | img-012.png | 15 | row 14
+   no usable row in the list | interview.jpg | 17 | 
+   no usable row in the list | interview.tif | 17 | 
+   no usable row in the list | shared.jpg | 18 | 
+   no usable row in the list | shared.jpg | 18 | 
+   no usable row in the list | map.v2.jpg | 19 | 
+-- moved caption of img-010 down 30pt, top=711
+== captions-v2.csv added=0 updated=2 unchanged=12 skipped=12
+   duplicate row (row 5 used) | img-004.jpg |  | row 7
+   empty caption (no text for this file) | img-009.png |  | row 11
+   matches more than one file (row ignored) | shared.jpg |  | row 29: <repo>\tests\fixtures\img\a\shared.jpg; <repo>\tests\fixtures\img\b\shared.jpg
+   matches more than one file (row ignored) | interview |  | row 28: <repo>\tests\fixtures\img\interview.jpg; <repo>\tests\fixtures\img\interview.tif
+   in the list but not in the document | img-019.jpg |  | row 20
+   in the list but not in the document | img-023.jpg |  | row 22
+   only a similar file name is placed (row ignored) | img-027.JPG |  | row 26: img-027.png
+   only a similar file name is placed (row ignored) | map.v2 |  | row 30: map.v2.jpg
+   in the list but not in the document | img-099.jpg |  | row 31
+   placed 2 times | img-005.jpg | 3, 16 | row 6
+   skipped: the caption is threaded to another frame | img-008.jpg | 4 | row 10
+   updated | img-010.jpg | 5 | row 12
+   has an earlier caption but no usable row now (left as is) | img-013.jpg | 7 | 
+   skipped: the caption is not grouped with this image | img-014.jpg | 7 | row 15
+   skipped: image or its layer is hidden | img-017.jpg | 9 | row 18
+   updated | img-018.png | 9 | row 19
+   skipped: the image was relinked to a different file after the caption was made | relinked.jpg | 10 | row 34
+   no usable row in the list | img-020.jpg | 10 | 
+   no usable row in the list | img-021.png | 11 | 
+   skipped: image is inside a group | img-022.jpg | 11 | row 21
+   skipped: image or its layer is locked | img-024.png | 12 | row 23
+   placed 2 times | img-025.jpg | 13, 13 | row 24
+   skipped: image is inside a group | img-025.jpg | 13 | row 24
+   skipped: 2 caption frames carry this image's mark (copied?) | img-025.jpg | 13 | row 24
+   skipped: image is on the pasteboard | img-026.jpg |  | row 25
+   no usable row in the list | img-027.png | 14 | 
+   skipped: the caption or its layer is hidden | img-028.jpg | 14 | row 27
+   skipped: image is anchored in text | img-012.png | 15 | row 14
+   no usable row in the list | interview.jpg | 17 | 
+   no usable row in the list | interview.tif | 17 | 
+   no usable row in the list | shared.jpg | 18 | 
+   no usable row in the list | shared.jpg | 18 | 
+   no usable row in the list | map.v2.jpg | 19 | 
+   skipped: the image was relinked to a file of the same name in another folder | cover.jpg | 19 | was <repo>\tests\fixtures\img\a\cover.jpg; now <repo>\tests\fixtures\img\b\cover.jpg
+   updated, frame runs past the bottom of the page | img-018.png | 9 | 
+   caption whose image was not found (left as is) |  | 12 | Figure 23. Caption text for image 23.
+== captions-v2.csv added=0 updated=0 unchanged=15 skipped=11
+   duplicate row (row 5 used) | img-004.jpg |  | row 7
+   empty caption (no text for this file) | img-009.png |  | row 11
+   matches more than one file (row ignored) | shared.jpg |  | row 29: <repo>\tests\fixtures\img\a\shared.jpg; <repo>\tests\fixtures\img\b\shared.jpg
+   matches more than one file (row ignored) | interview |  | row 28: <repo>\tests\fixtures\img\interview.jpg; <repo>\tests\fixtures\img\interview.tif
+   in the list but not in the document | img-019.jpg |  | row 20
+   in the list but not in the document | img-023.jpg |  | row 22
+   only a similar file name is placed (row ignored) | img-027.JPG |  | row 26: img-027.png
+   only a similar file name is placed (row ignored) | map.v2 |  | row 30: map.v2.jpg
+   in the list but not in the document | img-099.jpg |  | row 31
+   placed 2 times | img-005.jpg | 3, 16 | row 6
+   skipped: the caption is threaded to another frame | img-008.jpg | 4 | row 10
+   has an earlier caption but no usable row now (left as is) | img-013.jpg | 7 | 
+   skipped: the caption is not grouped with this image | img-014.jpg | 7 | row 15
+   skipped: image or its layer is hidden | img-017.jpg | 9 | row 18
+   skipped: the image was relinked to a different file after the caption was made | relinked.jpg | 10 | row 34
+   no usable row in the list | img-020.jpg | 10 | 
+   no usable row in the list | img-021.png | 11 | 
+   skipped: image is inside a group | img-022.jpg | 11 | row 21
+   skipped: image or its layer is locked | img-024.png | 12 | row 23
+   placed 2 times | img-025.jpg | 13, 13 | row 24
+   skipped: image is inside a group | img-025.jpg | 13 | row 24
+   skipped: 2 caption frames carry this image's mark (copied?) | img-025.jpg | 13 | row 24
+   skipped: image is on the pasteboard | img-026.jpg |  | row 25
+   no usable row in the list | img-027.png | 14 | 
+   skipped: the caption or its layer is hidden | img-028.jpg | 14 | row 27
+   skipped: image is anchored in text | img-012.png | 15 | row 14
+   no usable row in the list | interview.jpg | 17 | 
+   no usable row in the list | interview.tif | 17 | 
+   no usable row in the list | shared.jpg | 18 | 
+   no usable row in the list | shared.jpg | 18 | 
+   no usable row in the list | map.v2.jpg | 19 | 
+   accepted: the image was relinked to a file of the same name in another folder | cover.jpg | 19 | was <repo>\tests\fixtures\img\a\cover.jpg; now <repo>\tests\fixtures\img\b\cover.jpg
+   caption whose image was not found (left as is) |  | 12 | Figure 23. Caption text for image 23.
+== captions-v2.csv added=0 updated=0 unchanged=15 skipped=11
+   duplicate row (row 5 used) | img-004.jpg |  | row 7
+   empty caption (no text for this file) | img-009.png |  | row 11
+   matches more than one file (row ignored) | shared.jpg |  | row 29: <repo>\tests\fixtures\img\a\shared.jpg; <repo>\tests\fixtures\img\b\shared.jpg
+   matches more than one file (row ignored) | interview |  | row 28: <repo>\tests\fixtures\img\interview.jpg; <repo>\tests\fixtures\img\interview.tif
+   in the list but not in the document | img-019.jpg |  | row 20
+   in the list but not in the document | img-023.jpg |  | row 22
+   only a similar file name is placed (row ignored) | img-027.JPG |  | row 26: img-027.png
+   only a similar file name is placed (row ignored) | map.v2 |  | row 30: map.v2.jpg
+   in the list but not in the document | img-099.jpg |  | row 31
+   placed 2 times | img-005.jpg | 3, 16 | row 6
+   skipped: the caption is threaded to another frame | img-008.jpg | 4 | row 10
+   has an earlier caption but no usable row now (left as is) | img-013.jpg | 7 | 
+   skipped: the caption is not grouped with this image | img-014.jpg | 7 | row 15
+   skipped: image or its layer is hidden | img-017.jpg | 9 | row 18
+   skipped: the image was relinked to a different file after the caption was made | relinked.jpg | 10 | row 34
+   no usable row in the list | img-020.jpg | 10 | 
+   no usable row in the list | img-021.png | 11 | 
+   skipped: image is inside a group | img-022.jpg | 11 | row 21
+   skipped: image or its layer is locked | img-024.png | 12 | row 23
+   placed 2 times | img-025.jpg | 13, 13 | row 24
+   skipped: image is inside a group | img-025.jpg | 13 | row 24
+   skipped: 2 caption frames carry this image's mark (copied?) | img-025.jpg | 13 | row 24
+   skipped: image is on the pasteboard | img-026.jpg |  | row 25
+   no usable row in the list | img-027.png | 14 | 
+   skipped: the caption or its layer is hidden | img-028.jpg | 14 | row 27
+   skipped: image is anchored in text | img-012.png | 15 | row 14
+   no usable row in the list | interview.jpg | 17 | 
+   no usable row in the list | interview.tif | 17 | 
+   no usable row in the list | shared.jpg | 18 | 
+   no usable row in the list | shared.jpg | 18 | 
+   no usable row in the list | map.v2.jpg | 19 | 
+   caption whose image was not found (left as is) |  | 12 | Figure 23. Caption text for image 23.
+-- img-010 after v2: top=711 text=Figure 10 (revised). New wording from the editor.
+== captions.csv added=22 updated=0 unchanged=0 skipped=5
+-- settings after: units=2053991795/2053991795 origin=1380143983 zero=10,10 active=Locked art locked=true
+-- img-001 gap in the mm document = 4 pt, left edge diff = 0
+== captions-semi.csv added=22 updated=0 unchanged=0 skipped=5
+-- semi: page items before=83 after run=127 after one undo=83
+-- forced stop caught: outer=undefined inner=forced stop items inside the run=127
+-- failed run: page items before=83 after=83
+== captions.csv added=22 updated=0 unchanged=0 skipped=5
+== captions-v2.csv added=0 updated=3 unchanged=18 skipped=5
+-- undo of an update run: after v2=Figure 10 (revised). New wordi | after undo=Figure 10. Caption text for im | label=Figure 10. Caption text for im
+== order/jpg-first.csv added=1 updated=0 unchanged=0 skipped=0
+   only a similar file name is placed (row ignored) | harbor.jpg |  | row 2: harbor.tif
+   no usable row in the list | photo.jpg.tif | 1 | 
+   no usable row in the list | map.jpg | 1 | 
+   added, frame overlaps another object | harbor.tif | 1 | Rectangle
+   harbor.tif caption: From the exact row. | map.jpg caption: (none) | photo.jpg.tif caption: (none)
+== order/tif-first.csv added=1 updated=0 unchanged=0 skipped=0
+   only a similar file name is placed (row ignored) | harbor.jpg |  | row 3: harbor.tif
+   no usable row in the list | photo.jpg.tif | 1 | 
+   no usable row in the list | map.jpg | 1 | 
+   added, frame overlaps another object | harbor.tif | 1 | Rectangle
+   harbor.tif caption: From the exact row. | map.jpg caption: (none) | photo.jpg.tif caption: (none)
+== order/base-first.csv added=1 updated=0 unchanged=0 skipped=0
+   duplicate row (row 3 used) | harbor |  | row 2
+   no usable row in the list | photo.jpg.tif | 1 | 
+   no usable row in the list | map.jpg | 1 | 
+   added, frame overlaps another object | harbor.tif | 1 | Rectangle
+   harbor.tif caption: From the exact row. | map.jpg caption: (none) | photo.jpg.tif caption: (none)
+== order/only-jpg.csv added=0 updated=0 unchanged=0 skipped=0
+   only a similar file name is placed (row ignored) | harbor.jpg |  | row 2: harbor.tif
+   only a similar file name is placed (row ignored) | map.v2 |  | row 3: map.jpg
+   no usable row in the list | photo.jpg.tif | 1 | 
+   no usable row in the list | map.jpg | 1 | 
+   no usable row in the list | harbor.tif | 1 | 
+   harbor.tif caption: (none) | map.jpg caption: (none) | photo.jpg.tif caption: (none)
+== order/fffd.csv added=0 updated=0 unchanged=0 skipped=0
+   caption contains the replacement character U+FFFD (row has no usable text) | harbor.tif |  | row 2
+   no usable row in the list | photo.jpg.tif | 1 | 
+   no usable row in the list | map.jpg | 1 | 
+   harbor.tif caption: (none) | map.jpg caption: (none) | photo.jpg.tif caption: (none)
+== order/blank-exact.csv added=0 updated=0 unchanged=0 skipped=0
+   empty caption (no text for this file) | harbor.tif |  | row 2
+   duplicate row (row 2 used) | harbor |  | row 3
+   no usable row in the list | photo.jpg.tif | 1 | 
+   no usable row in the list | map.jpg | 1 | 
+   harbor.tif caption: (none) | map.jpg caption: (none) | photo.jpg.tif caption: (none)
+== order/stem.csv added=1 updated=0 unchanged=0 skipped=0
+   only a similar file name is placed (row ignored) | photo.jpg |  | row 2: photo.jpg.tif
+   no usable row in the list | photo.jpg.tif | 1 | 
+   no usable row in the list | map.jpg | 1 | 
+   added, frame overlaps another object | harbor.tif | 1 | Rectangle
+   harbor.tif caption: From the exact row. | map.jpg caption: (none) | photo.jpg.tif caption: (none)
+== order/fffd-exact.csv added=0 updated=0 unchanged=0 skipped=0
+   caption contains the replacement character U+FFFD (row has no usable text) | harbor.tif |  | row 2
+   duplicate row (row 2 used) | harbor |  | row 3
+   no usable row in the list | photo.jpg.tif | 1 | 
+   no usable row in the list | map.jpg | 1 | 
+   harbor.tif caption: (none) | map.jpg caption: (none) | photo.jpg.tif caption: (none)
+-- failure place: message=forced failure while placing | page items before=83 after=83 | captions left=0 | active layer Corrections -> Corrections
+-- failure layer: message=forced failure while restoring the layer | page items before=83 after=83 | captions left=0 | active layer Corrections -> Corrections
+-- report write failure: error=Cannot write C:\no-such-folder-cfl\report.csv
+-- report names: test-names-captions-20261117-092218.csv then test-names-captions-20261117-092218-2.csv
