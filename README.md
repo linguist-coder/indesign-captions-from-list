@@ -2,6 +2,9 @@
 
 An ExtendScript for Adobe InDesign that places image captions from a CSV list. Each row gives a file name from the Links panel and the caption for that image. The script puts a caption frame below each matching image, groups the two, and saves a report of anything it could not do.
 
+- Video: https://youtu.be/zjFzvkvZHmM
+- Written guide: https://www.linguist-coder.com/2026/11/indesign-image-captions-from-spreadsheet.html
+
 ## Install
 
 1. Download `CaptionsFromList.jsx` from the [latest release](https://github.com/linguist-coder/indesign-captions-from-list/releases/latest).
